@@ -73,11 +73,6 @@ script: !include scripts.yaml
 # Added by me
 python_script:
 
-#input_boolean:
-#  backlightctl:
-#    name: Control desk backlight
-#    initial: off
-
 
 light:
   - platform: mqtt_json
@@ -91,4 +86,15 @@ light:
     rgb: true
     optimistic: false
     qos: 0
+
+#device_tracker:
+#  - platform: ping
+#    hosts:
+#      workstation: 192.168.0.17
+
+binary_sensor:
+  - platform: ping
+    name: workstation
+    host: 192.168.0.17
+    scan_interval: 5
 
