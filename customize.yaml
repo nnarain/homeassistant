@@ -1,0 +1,4 @@
+input_boolean.backlightctl:
+  friendly_name: Toggle desk backlight
+  icon: mdi:lightbulb
+light.desktop_backlight: {}
