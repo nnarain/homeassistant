@@ -21,20 +21,27 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
-                                "sensor.myhome_stats_cpu",
-                                "sensor.myhome_stats_memory"
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "sensor.myhome_stats_cpu",
+                                        "sensor.myhome_stats_memory"
+                                    ],
+                                    "title": "Home server - system",
+                                    "type": "history-graph"
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.myhome_stats_temperature"
+                                    ],
+                                    "title": "Home server - temperature",
+                                    "type": "history-graph"
+                                }
                             ],
-                            "title": "Home Server Stats",
-                            "type": "history-graph"
-                        },
-                        {
-                            "entities": [
-                                "sensor.myhome_stats_temperature"
-                            ],
-                            "type": "history-graph"
+                            "type": "horizontal-stack"
                         }
                     ],
+                    "panel": true,
                     "title": "Metrics"
                 }
             ]
