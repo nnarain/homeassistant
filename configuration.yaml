@@ -2,10 +2,10 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 43.4106
-  longitude: -80.5011
+  latitude: 43.3878
+  longitude: -80.4296
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 344
+  elevation: 0
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -18,15 +18,14 @@ introduction:
 
 # Enables the frontend
 frontend:
+  themes: !include_dir_merge_named themes/
 
 # Enables configuration UI
 config:
 
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-  # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
+  api_password: !secret http_password
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -53,15 +52,44 @@ logbook:
 map:
 
 # Track the sun
-#sun:
+sun:
 
-# Weather prediction
-#sensor:
-#  - platform: yr
+# MQTT Setup
+mqtt:
+  broker: localhost
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
+
+  # Home server stats
+  - platform: mqtt
+    name: myhome_stats_cpu
+    state_topic: /home/myhome/stats/cpu
+    unit_of_measurement: "percent"
+  - platform: mqtt
+    name: myhome_stats_memory
+    state_topic: /home/myhome/stats/memory
+    unit_of_measurement: "percent"
+  - platform: mqtt
+    name: myhome_stats_temperature
+    state_topic: /home/myhome/stats/temperature
+    unit_of_measurement: C
 
 # Text to speech
 tts:
   - platform: google
+
+# Switches
+switch:
+  - platform: tplink
+    name: Lamp 1
+    host: 192.168.0.15
+  - platform: tplink
+    name: Lamp 2
+    host: 192.168.0.16
+
 
 # Cloud
 cloud:
@@ -69,32 +97,3 @@ cloud:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-
-# Added by me
-python_script:
-
-
-light:
-  - platform: mqtt_json
-    name: Desktop Backlight
-    command_topic: "/home/backlight/set"
-    state_topic: "/home/backlight/state"
-    effect: true
-    effect_list:
-      - rainbow
-      - solid
-    rgb: true
-    optimistic: false
-    qos: 0
-
-#device_tracker:
-#  - platform: ping
-#    hosts:
-#      workstation: 192.168.0.17
-
-binary_sensor:
-  - platform: ping
-    name: workstation
-    host: 192.168.0.17
-    scan_interval: 5
-
