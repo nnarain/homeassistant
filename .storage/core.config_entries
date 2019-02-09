@@ -1,0 +1,17 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "mqtt",
+                "entry_id": "8ba7a4546ad04a1ba204d7d8ed12d5b0",
+                "source": "import",
+                "title": "configuration.yaml",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

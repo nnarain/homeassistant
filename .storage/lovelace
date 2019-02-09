@@ -1,0 +1,52 @@
+{
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "cards": [
+                        {
+                            "entities": [
+                                "switch.lamp_1",
+                                "switch.lamp_2"
+                            ],
+                            "title": "Switch",
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "sensor.myhome_stats_cpu",
+                                        "sensor.myhome_stats_memory"
+                                    ],
+                                    "title": "Home server - system",
+                                    "type": "history-graph"
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.myhome_stats_temperature"
+                                    ],
+                                    "title": "Home server - temperature",
+                                    "type": "history-graph"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "panel": true,
+                    "title": "Metrics"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}
