@@ -19,3 +19,5 @@ ip_bans.yaml
 
 !/.gitignore
 
+.storage/auth
+
