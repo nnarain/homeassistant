@@ -20,4 +20,5 @@ ip_bans.yaml
 !/.gitignore
 
 .storage/auth
+.storage/core.restore_state
 
