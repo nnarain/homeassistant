@@ -8,3 +8,23 @@
   - data:
       name: slate
     service: frontend.set_theme
+- id: '1550970678962'
+  alias: Turn off Living Room lights at 3 a.m. - Weekday
+  trigger:
+  - at: 03:00:00
+    platform: time
+  condition:
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data:
+      entity_id: lamp_1
+    service: switch.turn_off
+  - data:
+      entity_id: lamp_2
+    service: switch.turn_off
