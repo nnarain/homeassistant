@@ -1,7 +1,7 @@
-group:
-  living_room:
-    name: Living Room
-    entities: 
-      - switch.lamp_1
-      - switch.lamp_2
+#group:
+#  living_room:
+#    name: Living Room
+#    entities: 
+#      - switch.lamp_1
+#      - switch.lamp_2
 

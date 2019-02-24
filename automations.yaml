@@ -28,3 +28,12 @@
   - data:
       entity_id: lamp_2
     service: switch.turn_off
+- id: '1550990243045'
+  alias: SSL Renewal
+  trigger:
+  - below: '29'
+    entity_id: sensor.ssl_vert_expiry
+    platform: numeric_state
+  condition: []
+  action:
+  - service: shell_command.renew_ssl
