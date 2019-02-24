@@ -26,6 +26,14 @@ config:
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
   api_password: !secret http_password
+  ssl_certificate: /etc/letsencrypt/live/nnarain.duckdns.org/fullchain.pem
+  ssl_key: /etc/letsencrypt/live/nnarain.duckdns.org/privkey.pem
+  base_url: nnarain.duckdns.org
+
+# DuckDNS
+duckdns:
+  domain: nnarain
+  access_token: !secret duckdns_access_token
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -76,6 +84,16 @@ sensor:
     name: myhome_stats_temperature
     state_topic: /home/myhome/stats/temperature
     unit_of_measurement: C
+
+  - platform: command_line
+    name: SSL vert expiry
+    unit_of_measurement: days
+    scan_interval: 10800
+    command: "ssl-cert-check -b -c /etc/letsencrypt/live/nnarain.duckdns.org/cert.pem | awk '{print $NF}'"
+
+# Shell command for SSL cert renewal
+shell_command:
+  renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges tls-sni-01 --tls-sni-01-port 8123 --pre-hook "sudo systemctl stop home-assistant@pi.service" --post-hook "sudo systemctl start home-assistant@pi.service"
 
 # Text to speech
 tts:
