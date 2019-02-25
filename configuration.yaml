@@ -103,10 +103,10 @@ tts:
 switch:
   - platform: tplink
     name: Lamp 1
-    host: 192.168.0.15
+    host: 192.168.0.11
   - platform: tplink
     name: Lamp 2
-    host: 192.168.0.16
+    host: 192.168.0.12
 
 
 # Cloud
