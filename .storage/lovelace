@@ -23,22 +23,47 @@
                         {
                             "cards": [
                                 {
-                                    "entities": [
-                                        "sensor.myhome_stats_cpu",
-                                        "sensor.myhome_stats_memory"
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                "sensor.myhome_stats_cpu",
+                                                "sensor.myhome_stats_memory"
+                                            ],
+                                            "title": "Home server - system",
+                                            "type": "history-graph"
+                                        },
+                                        {
+                                            "entities": [
+                                                "sensor.myhome_stats_temperature"
+                                            ],
+                                            "title": "Home server - temperature",
+                                            "type": "history-graph"
+                                        }
                                     ],
-                                    "title": "Home server - system",
-                                    "type": "history-graph"
+                                    "type": "horizontal-stack"
                                 },
                                 {
-                                    "entities": [
-                                        "sensor.myhome_stats_temperature"
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                "sensor.mediacenter_stats_cpu",
+                                                "sensor.mediacenter_stats_memory"
+                                            ],
+                                            "title": "Media Center - system",
+                                            "type": "history-graph"
+                                        },
+                                        {
+                                            "entities": [
+                                                "sensor.mediacenter_stats_temperature"
+                                            ],
+                                            "title": "Media Center - temperature",
+                                            "type": "history-graph"
+                                        }
                                     ],
-                                    "title": "Home server - temperature",
-                                    "type": "history-graph"
+                                    "type": "horizontal-stack"
                                 }
                             ],
-                            "type": "horizontal-stack"
+                            "type": "vertical-stack"
                         }
                     ],
                     "panel": true,

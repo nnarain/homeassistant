@@ -85,6 +85,20 @@ sensor:
     state_topic: /home/myhome/stats/temperature
     unit_of_measurement: C
 
+  # Media Center Stats
+  - platform: mqtt
+    name: mediacenter_stats_cpu
+    state_topic: /home/mediacenter/stats/cpu
+    unit_of_measurement: "percent"
+  - platform: mqtt
+    name: mediacenter_stats_memory
+    state_topic: /home/mediacenter/stats/memory
+    unit_of_measurement: "percent"
+  - platform: mqtt
+    name: mediacenter_stats_temperature
+    state_topic: /home/mediacenter/stats/temperature
+    unit_of_measurement: C
+
   - platform: command_line
     name: SSL vert expiry
     unit_of_measurement: days
