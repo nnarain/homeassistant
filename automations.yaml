@@ -1,5 +1,5 @@
-- id: '1550899645120'
-  alias: SetTheme
+- id: '1552250870799'
+  alias: Set Theme
   trigger:
   - event: start
     platform: homeassistant
@@ -8,32 +8,3 @@
   - data:
       name: slate
     service: frontend.set_theme
-- id: '1550970678962'
-  alias: Turn off Living Room lights at 3 a.m. - Weekday
-  trigger:
-  - at: 03:00:00
-    platform: time
-  condition:
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
-  action:
-  - data:
-      entity_id: lamp_1
-    service: switch.turn_off
-  - data:
-      entity_id: lamp_2
-    service: switch.turn_off
-#- id: '1550990243045'
-#  alias: SSL Renewal
-#  trigger:
-#  - below: '29'
-#    entity_id: sensor.ssl_vert_expiry
-#    platform: numeric_state
-#  condition: []
-#  action:
-#  - service: shell_command.renew_ssl
