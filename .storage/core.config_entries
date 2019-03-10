@@ -6,8 +6,19 @@
                 "data": {},
                 "domain": "mqtt",
                 "entry_id": "8ba7a4546ad04a1ba204d7d8ed12d5b0",
+                "options": {},
                 "source": "import",
                 "title": "configuration.yaml",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {},
+                "domain": "tplink",
+                "entry_id": "850fa8990c484a11a140e5c95bb738d9",
+                "options": {},
+                "source": "import",
+                "title": "TP-Link Smart Home",
                 "version": 1
             }
         ]

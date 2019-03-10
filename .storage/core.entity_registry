@@ -1,0 +1,26 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": "850fa8990c484a11a140e5c95bb738d9",
+                "device_id": "e48d37c727454815822db5c671f3e4d9",
+                "disabled_by": null,
+                "entity_id": "switch.lamp_1",
+                "name": null,
+                "platform": "tplink",
+                "unique_id": "B0:BE:76:1E:03:71"
+            },
+            {
+                "config_entry_id": "850fa8990c484a11a140e5c95bb738d9",
+                "device_id": "4c9d4533f5fa4c1686ca58d0899ea992",
+                "disabled_by": null,
+                "entity_id": "switch.lamp_2",
+                "name": null,
+                "platform": "tplink",
+                "unique_id": "B0:BE:76:1E:28:B8"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

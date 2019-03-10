@@ -1,0 +1,48 @@
+{
+    "data": {
+        "devices": [
+            {
+                "area_id": null,
+                "config_entries": [
+                    "850fa8990c484a11a140e5c95bb738d9"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "b0:be:76:1e:03:71"
+                    ]
+                ],
+                "hub_device_id": null,
+                "id": "e48d37c727454815822db5c671f3e4d9",
+                "identifiers": [],
+                "manufacturer": "TP-Link",
+                "model": "HS105(US)",
+                "name": "Lamp 1",
+                "name_by_user": null,
+                "sw_version": "1.5.2 Build 180528 Rel.114402"
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "850fa8990c484a11a140e5c95bb738d9"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "b0:be:76:1e:28:b8"
+                    ]
+                ],
+                "hub_device_id": null,
+                "id": "4c9d4533f5fa4c1686ca58d0899ea992",
+                "identifiers": [],
+                "manufacturer": "TP-Link",
+                "model": "HS105(US)",
+                "name": "Lamp 2",
+                "name_by_user": null,
+                "sw_version": "1.5.2 Build 180528 Rel.114402"
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}
