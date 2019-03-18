@@ -61,6 +61,26 @@
                                         }
                                     ],
                                     "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entities": [
+                                                "sensor.speedtest_download",
+                                                "sensor.speedtest_upload"
+                                            ],
+                                            "title": "Speed Test - Download/Upload",
+                                            "type": "history-graph"
+                                        },
+                                        {
+                                            "entities": [
+                                                "sensor.speedtest_ping"
+                                            ],
+                                            "title": "Speed Test - Ping",
+                                            "type": "history-graph"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
                                 }
                             ],
                             "type": "vertical-stack"
