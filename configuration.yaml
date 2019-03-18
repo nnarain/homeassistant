@@ -105,6 +105,13 @@ sensor:
     scan_interval: 10800
     command: "ssl-cert-check -b -c /etc/letsencrypt/live/nnarain.duckdns.org/cert.pem | awk '{print $NF}'"
 
+# Speed test
+speedtestdotnet:
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
 # Shell command for SSL cert renewal
 #shell_command:
 #  renew_ssl: ~/certbot/certbot-auto renew --quiet --no-self-upgrade --standalone --preferred-challenges tls-sni-01 --tls-sni-01-port 8123 --pre-hook "sudo systemctl stop home-assistant@pi.service" --post-hook "sudo systemctl start home-assistant@pi.service"
