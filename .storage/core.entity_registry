@@ -18,6 +18,15 @@
                 "name": null,
                 "platform": "tplink",
                 "unique_id": "B0:BE:76:1E:28:B8"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.remote_ui",
+                "name": null,
+                "platform": "cloud",
+                "unique_id": "cloud-remote-ui-connectivity"
             }
         ]
     },
